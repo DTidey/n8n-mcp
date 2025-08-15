@@ -1,4 +1,5 @@
-# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Example Home Assistant add-on repository
-url: 'https://github.com/home-assistant/addons-example'
-maintainer: Awesome Maintainer <awesome@example.com>
+name: n8n-mcp server
+version: '1.0.0'
+slug: n8n-mcp
+url: 'https://github.com/DTidey/n8n-mcp'
+maintainer: DTidey <david.tidey@tidey.com
