@@ -1,8 +1,7 @@
-name: n8n-mcp
+name: "n8n-mcp"
 version: "0.0.1"
-slug: n8nmcp
-description: n8n-mcp server for managing n8n instances
-url: "https://github.com/DTidey/n8n-mcp"
+slug: "n8nmcp"
+description: "n8n-mcp server for managing n8n instances"
 arch:
   - aarch64
 init: false
