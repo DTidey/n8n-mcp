@@ -1,44 +1,14 @@
----
-version: 2.5.2
-slug: mariadb
-name: MariaDB
-description: A SQL database server - a drop-in replacement for MySQL.
-url: https://github.com/home-assistant/hassio-addons/tree/master/mariadb
+name: "n8n-mcp"
+version: "0.0.1"
+slug: "n8nmcp"
+description: "n8n-mcp server for managing n8n instances"
 arch:
-  - armhf
-  - armv7
   - aarch64
-  - amd64
-  - i386
-backup_post: s6-svc -wd -d /run/s6/legacy-services/mariadb-lock/
-backup_pre: s6-svc -wU -u /run/s6/legacy-services/mariadb-lock/
-image: homeassistant/{arch}-addon-mariadb
 init: false
+map:
+  - share:rw
 options:
-  databases:
-    - homeassistant
-  logins:
-    - password: null
-      username: homeassistant
-  rights:
-    - database: homeassistant
-      username: homeassistant
-ports:
-  3306/tcp: null
+  message: "Hello world..."
 schema:
-  databases:
-    - str
-  logins:
-    - username: str
-      password: password
-  rights:
-    - database: str
-      privileges:
-        - "list(ALTER|CREATE|CREATE ROUTINE|CREATE TEMPORARY TABLES|\
-          CREATE VIEW|DELETE|DELETE HISTORY|DROP|EVENT|GRANT OPTION|INDEX|\
-          INSERT|LOCK TABLES|SELECT|SHOW VIEW|TRIGGER|UPDATE)?"
-      username: str
-services:
-  - mysql:provide
-startup: system
-timeout: 20
+  message: "str?"
+image: "ghcr.io/czlonkowski/n8n-mcp:latest"
